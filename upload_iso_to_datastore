@@ -1,0 +1,4 @@
+#upload iso to datastore
+$datastore = Get-Datastore "PK-VOL-01"
+New-PSDrive -Location $datastore -Name ds -PSProvider VimDatastore -Root "\"
+Copy-DatastoreItem -Item c:\users\dsatech\2016.iso -Destination ds:\
